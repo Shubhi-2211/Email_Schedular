@@ -1,0 +1,46 @@
+<section class="form-section">
+  <div class="section-header">
+    <h2><i class="fas fa-plus-circle"></i> Create New Campaign</h2>
+    <a href="/api/campaigns" class="btn btn-secondary">
+      <i class="fas fa-list"></i> View All Campaigns
+    </a>
+  </div>
+
+  <form action="/api/create" method="POST" class="campaign-form">
+    <div class="form-group">
+      <label for="title">
+        <i class="fas fa-heading"></i> Campaign Title
+      </label>
+      <input type="text" name="title" id="title" placeholder="Enter campaign title" required>
+    </div>
+
+    <div class="form-group">
+      <label for="message">
+        <i class="fas fa-envelope-open-text"></i> Message Content
+        <span class="hint">(HTML allowed)</span>
+      </label>
+      <textarea name="message" id="message" rows="8" placeholder="Write your email content here..." required></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="recipients">
+        <i class="fas fa-users"></i> Recipients
+        <span class="hint">(comma-separated emails)</span>
+      </label>
+      <input type="text" name="recipients" id="recipients" placeholder="user1@example.com, user2@example.com" required>
+    </div>
+
+    <div class="form-group">
+      <label for="scheduledTime">
+        <i class="fas fa-calendar-alt"></i> Scheduled Time
+      </label>
+      <input type="datetime-local" name="scheduledTime" id="scheduledTime" required>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" class="btn btn-primary">
+        <i class="fas fa-paper-plane"></i> Schedule Campaign
+      </button>
+    </div>
+  </form>
+</section>
